@@ -1,0 +1,5 @@
+- @list_keys.each do |list_key| 
+  - list = JSON.parse(Todo.riak["lists"][list_key].raw_data)
+  %div{:"data-purpose" => "list"}
+    %span= list["name"]
+  
